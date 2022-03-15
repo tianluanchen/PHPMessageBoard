@@ -14,5 +14,5 @@ define('DB_CONFIG', [
     "database" => "msgboard",
     "hostname" => "localhost",
     "port" => 3306,
-    "table_name" => "msgboard"
+    "table_name" => "message"
 ]);
