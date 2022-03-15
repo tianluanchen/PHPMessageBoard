@@ -1,0 +1,456 @@
+.cover{
+    opacity: 0.2;
+}
+.leave-a-message {
+    color: rgb(80, 127, 255);
+}
+
+/*! Dark reader generated CSS | Licensed under MIT https://github.com/darkreader/darkreader/blob/master/LICENSE */
+
+/* User-Agent Style */
+html {
+    background-color: #212222 !important;
+}
+html {
+    color-scheme: dark !important;
+}
+html, body {
+    background-color: #212222;
+}
+html, body {
+    border-color: #6d6559;
+    color: #d0cbc4;
+}
+a {
+    color: #4184d1;
+}
+table {
+    border-color: #545858;
+}
+::placeholder {
+    color: #a29a8f;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #424411 !important;
+    color: #d0cbc4 !important;
+}
+::-webkit-scrollbar {
+    background-color: #282a2a;
+    color: #9c9589;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #474a4a;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #575b5b;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #4a4d4e;
+}
+::-webkit-scrollbar-corner {
+    background-color: #212222;
+}
+* {
+    scrollbar-color: #474a4a #282a2a;
+}
+::selection {
+    background-color: #154c8e !important;
+    color: #d0cbc4 !important;
+}
+::-moz-selection {
+    background-color: #154c8e !important;
+    color: #d0cbc4 !important;
+}
+
+/* Variables Style */
+:root {
+   --darkreader-neutral-background: #1d1e1e;
+   --darkreader-neutral-text: #c2bcb4;
+   --darkreader-selection-background: #154c8e;
+   --darkreader-selection-text: #d0cbc4;
+}
+
+/* Modified CSS */
+* {
+    border-color: currentcolor;
+    outline-color: currentcolor;
+}
+:root {
+    --darkreader-bg--custom-white: #2b2c2c;
+    --darkreader-text--custom-white: #c5c0b8;
+}
+body {
+    background-color: var(--darkreader-bg--custom-white);
+}
+ul,
+ol {
+    list-style-image: none;
+}
+a {
+    color: inherit;
+    text-decoration-color: currentcolor;
+}
+footer {
+    color: rgb(163, 157, 145);
+}
+main {
+    --main-spacing: 22px;
+}
+.progress-bar {
+    background-image: linear-gradient(to right,
+    rgb(43, 144, 90) 0%,
+    rgb(40, 151, 132) 100%);
+}
+.active.loader {
+    background-color: rgba(13, 13, 13, 0.3);
+}
+.active > .loading {
+    --border-radius: 1rem;
+    color: rgb(208, 203, 196);
+    background-color: transparent;
+    background-image: none;
+}
+.active > .loading::before {
+    background-image: linear-gradient(to left,
+    rgb(26, 84, 133) 0%,
+    rgb(32, 159, 163) 100%);
+}
+.active > .loading::after {
+    background-color: rgba(51, 59, 72, 0.75);
+}
+@media (max-width: 520px) {
+    .progress-bar {
+        background-image: linear-gradient(to right,
+        rgb(117, 21, 48) 0%,
+        rgb(114, 99, 21) 100%);
+    }
+}
+.title {
+    --darkreader-text--title-color: #b3ada2;
+    color: var(--darkreader-text--title-color);
+}
+.msg-list li {
+    border-bottom-color: rgba(130, 121, 106, 0.25);
+}
+.msg-list li:last-child {
+    border-bottom-color: unset;
+}
+.nickname {
+    color: rgb(166, 159, 149);
+}
+.nickname:hover {
+    background-color: rgb(73, 77, 77);
+    color: var(--darkreader-text--custom-white, #d0cbc4);
+}
+.whether-to-reply {
+    color: rgb(174, 168, 157);
+}
+.replied {
+    color: var(--darkreader-text--custom-white);
+    background-color: rgb(31, 66, 131);
+}
+.replied:hover {
+    background-color: rgb(20, 68, 157);
+    box-shadow: rgba(13, 13, 13, 0.6) 0px 0px 3px 0px;
+}
+.text {
+    --darkreader-bg--text-bg-color: #272727;
+    background-color: var(--darkreader-bg--text-bg-color, #272727);
+    color: rgb(182, 176, 166);
+}
+.reply {
+    --darkreader-bg--text-bg-color: #2e3030;
+    box-shadow: rgba(91, 95, 95, 0.35) -3px 3px 3px 0px;
+}
+.reply::after {
+    background-color: rgb(16, 24, 99);
+    color: var(--darkreader-text--custom-white);
+}
+.msg {
+    --darkreader-bg--text-bg-color: #272727;
+    box-shadow: rgba(80, 83, 84, 0.35) -3px 3px 3px 0px;
+}
+.date {
+    color: rgb(174, 168, 157);
+}
+.page-nav > span,
+.page-nav > label {
+    text-decoration-color: currentcolor;
+    color: rgb(182, 176, 166);
+}
+select {
+    color: inherit;
+    background-color: rgb(39, 39, 39);
+}
+.form > label {
+    color: rgb(185, 179, 170);
+}
+.input {
+    border-color: rgb(64, 67, 67);
+    color: rgb(188, 182, 173);
+}
+.input:focus {
+    border-color: rgb(30, 63, 112);
+    outline-color: currentcolor;
+    box-shadow: rgba(26, 79, 157, 0.25) 0px 0px 0px 4px;
+}
+#submit {
+    color: var(--darkreader-text--custom-white);
+    border-color: currentcolor;
+    background-color: rgb(41, 107, 73);
+}
+#submit:hover {
+    background-color: rgb(31, 94, 63);
+}
+#submit:focus {
+    box-shadow: rgba(32, 101, 66, 0.25) 0px 0px 0px 4px;
+}
+img#captcha:hover {
+    box-shadow: rgba(13, 13, 13, 0.3) 0px 0px 4px 0px;
+}
+.swal2-popup.swal2-toast {
+    background-color: rgb(33, 34, 34);
+    background-image: none;
+    box-shadow: rgba(13, 13, 13, 0.07) 0px 0px 1px,
+    rgba(13, 13, 13, 0.07) 0px 1px 2px,
+    rgba(13, 13, 13, 0.07) 1px 2px 4px,
+    rgba(13, 13, 13, 0.07) 1px 3px 8px,
+    rgba(13, 13, 13, 0.07) 2px 4px 16px;
+}
+.swal2-popup.swal2-toast .swal2-success {
+    border-color: rgb(69, 105, 43);
+}
+.swal2-container.swal2-backdrop-show,
+.swal2-container.swal2-noanimation {
+    background-color: rgba(13, 13, 13, 0.4);
+    background-image: none;
+}
+.swal2-container.swal2-backdrop-hide {
+    background-color: rgba(13, 13, 13, 0) !important;
+    background-image: none !important;
+}
+.swal2-popup {
+    border-color: currentcolor;
+    background-color: rgb(33, 34, 34);
+    background-image: none;
+    color: rgb(163, 155, 144);
+}
+.swal2-popup:focus {
+    outline-color: currentcolor;
+}
+.swal2-title {
+    color: inherit;
+}
+.swal2-actions:not(.swal2-loading) .swal2-styled:hover {
+    background-image: linear-gradient(rgba(13, 13, 13, 0.1),
+    rgba(13, 13, 13, 0.1));
+}
+.swal2-actions:not(.swal2-loading) .swal2-styled:active {
+    background-image: linear-gradient(rgba(13, 13, 13, 0.2),
+    rgba(13, 13, 13, 0.2));
+}
+.swal2-loader {
+    border-color: rgb(45, 90, 131) transparent;
+}
+.swal2-styled {
+    box-shadow: rgba(13, 13, 13, 0) 0px 0px 0px 3px;
+}
+.swal2-styled.swal2-confirm {
+    border-color: currentcolor;
+    background-image: initial;
+    background-color: rgb(44, 37, 114);
+    color: rgb(208, 203, 196);
+}
+.swal2-styled.swal2-confirm:focus {
+    box-shadow: rgba(44, 37, 114, 0.5) 0px 0px 0px 3px;
+}
+.swal2-styled.swal2-deny {
+    border-color: currentcolor;
+    background-image: initial;
+    background-color: rgb(140, 41, 45);
+    color: rgb(208, 203, 196);
+}
+.swal2-styled.swal2-deny:focus {
+    box-shadow: rgba(140, 41, 45, 0.5) 0px 0px 0px 3px;
+}
+.swal2-styled.swal2-cancel {
+    border-color: currentcolor;
+    background-image: initial;
+    background-color: rgb(89, 93, 94);
+    color: rgb(208, 203, 196);
+}
+.swal2-styled.swal2-cancel:focus {
+    box-shadow: rgba(89, 93, 94, 0.5) 0px 0px 0px 3px;
+}
+.swal2-styled.swal2-default-outline:focus {
+    box-shadow: rgba(56, 86, 114, 0.5) 0px 0px 0px 3px;
+}
+.swal2-styled:focus {
+    outline-color: currentcolor;
+}
+.swal2-styled::-moz-focus-inner {
+    border-color: currentcolor;
+}
+.swal2-footer {
+    border-top-color: rgb(58, 60, 60);
+    color: inherit;
+}
+.swal2-timer-progress-bar {
+    background-color: rgba(13, 13, 13, 0.2);
+    background-image: none;
+}
+.swal2-close {
+    border-color: currentcolor;
+    background-color: rgba(13, 13, 13, 0);
+    background-image: none;
+    color: rgb(180, 174, 165);
+}
+.swal2-close:hover {
+    background-color: rgba(13, 13, 13, 0);
+    background-image: none;
+    color: rgb(206, 108, 105);
+}
+.swal2-close:focus {
+    outline-color: currentcolor;
+    box-shadow: rgba(56, 86, 114, 0.5) 0px 0px 0px 3px inset;
+}
+.swal2-close::-moz-focus-inner {
+    border-color: currentcolor;
+}
+.swal2-html-container {
+    color: inherit;
+}
+.swal2-file,
+.swal2-input,
+.swal2-textarea {
+    border-color: rgb(63, 66, 66);
+    background-color: inherit;
+    background-image: inherit;
+    box-shadow: rgba(13, 13, 13, 0.06) 0px 1px 1px inset,
+    rgba(13, 13, 13, 0) 0px 0px 0px 3px;
+    color: inherit;
+}
+.swal2-file.swal2-inputerror,
+.swal2-input.swal2-inputerror,
+.swal2-textarea.swal2-inputerror {
+    border-color: rgb(117, 27, 26) !important;
+    box-shadow: rgb(113, 26, 25) 0px 0px 2px !important;
+}
+.swal2-file:focus,
+.swal2-input:focus,
+.swal2-textarea:focus {
+    border-color: rgb(39, 78, 94);
+    outline-color: currentcolor;
+    box-shadow: rgba(13, 13, 13, 0.06) 0px 1px 1px inset,
+    rgba(56, 86, 114, 0.5) 0px 0px 0px 3px;
+}
+.swal2-file::placeholder,
+.swal2-input::placeholder,
+.swal2-textarea::placeholder {
+    color: rgb(180, 174, 165);
+}
+.swal2-file::placeholder,
+.swal2-input::placeholder,
+.swal2-textarea::placeholder {
+    color: rgb(180, 174, 165);
+}
+.swal2-range {
+    background-color: rgb(33, 34, 34);
+    background-image: none;
+}
+.swal2-range output {
+    color: inherit;
+}
+.swal2-file {
+    background-color: inherit;
+    background-image: inherit;
+}
+.swal2-select {
+    background-color: inherit;
+    background-image: inherit;
+    color: inherit;
+}
+.swal2-checkbox,
+.swal2-radio {
+    background-color: rgb(33, 34, 34);
+    background-image: none;
+    color: inherit;
+}
+.swal2-validation-message {
+    background-color: rgb(40, 42, 42);
+    background-image: none;
+    color: rgb(153, 145, 133);
+}
+.swal2-validation-message::before {
+    background-color: rgb(113, 26, 25);
+    color: rgb(208, 203, 196);
+}
+.swal2-icon {
+    border-color: rgb(130, 121, 106);
+}
+.swal2-icon.swal2-error {
+    border-color: rgb(117, 27, 26);
+    color: rgb(206, 108, 105); 
+}
+.swal2-icon.swal2-error [class^=\"swal2-x-mark-line\"] {
+    background-color: rgb(113, 26, 25);
+}
+.swal2-icon.swal2-warning {
+    border-color: rgb(111, 64, 23);
+    color: rgb(214, 163, 116);
+}
+.swal2-icon.swal2-info {
+    border-color: rgb(29, 90, 108);
+    color: rgb(85, 174, 200);
+}
+.swal2-icon.swal2-question {
+    border-color: rgb(53, 71, 77);
+    color: rgb(132, 157, 165);
+}
+.swal2-icon.swal2-success {
+    border-color: rgb(69, 105, 43);
+    color: rgb(153, 191, 123);
+}
+.swal2-icon.swal2-success .swal2-success-ring {
+    border-color: rgba(69, 105, 43, 0.3); 
+}
+.swal2-icon.swal2-success [class^=\"swal2-success-line\"] {
+    background-color: rgb(77, 103, 43);
+}
+.swal2-progress-steps {
+    background-color: inherit;
+    background-image: inherit;
+}
+.swal2-progress-steps .swal2-progress-step {
+    background-color: rgb(45, 91, 134);
+    background-image: none;
+    color: rgb(208, 203, 196);
+}
+.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step {
+    background-color: rgb(45, 91, 134);
+    background-image: none;
+}
+.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step {
+    background-color: rgb(40, 72, 82);
+    background-image: none;
+    color: rgb(208, 203, 196);
+}
+.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step-line {
+    background-color: rgb(40, 72, 82);
+    background-image: none;
+}
+.swal2-progress-steps .swal2-progress-step-line {
+    background-color: rgb(45, 91, 134);
+    background-image: none;
+}
+body.swal2-no-backdrop .swal2-container {
+    background-color: transparent !important;
+}
+body.swal2-no-backdrop .swal2-container .swal2-modal {
+    box-shadow: rgba(13, 13, 13, 0.4) 0px 0px 10px;
+}
+body.swal2-toast-shown .swal2-container {
+    background-color: transparent;
+}

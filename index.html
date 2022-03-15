@@ -1,0 +1,89 @@
+<!--
+ * @Author       :  Ayouth
+ * @Date         :  2022-03-14 GMT+0800
+ * @LastEditTime :  2022-03-16 GMT+0800
+ * @FilePath     :  index.html
+ * @Description  :  留言板页面
+ * Copyright (c) 2022 by Ayouth, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayouth的留言板</title>
+    <link rel="stylesheet" href="./css/msgboard.css">
+    <link rel="stylesheet" href="./css/sweetalert2.min.css">
+    <link rel="stylesheet" href="./css/cover.css">
+    <link id="dark-css" rel="stylesheet" href="./css/msgbord-dark.css" disabled>
+    <script>
+        /**
+         * @description: 首先判断渲染dark 
+         */
+        !function () {
+            if (localStorage.getItem('dark-mode') == 'true') {
+                var css = document.querySelector('link#dark-css');
+                css && (css.disabled = false);
+                document.addEventListener('DOMContentLoaded', function () {
+                    var btn = document.querySelector('.darkmode-toggle');
+                    btn.classList.toggle('darkmode-toggle-light', true);
+                });
+            }
+        }();
+    </script>
+</head>
+
+<body>
+    <div class="cover"></div>
+    <div class="loader">
+        <div class="loading">
+            loading...
+        </div>
+    </div>
+    <div class="progress-bar">
+    </div>
+    <main>
+        <section>
+            <div class="title">
+                <a href="">
+                    Ayouth的留言板
+                </a>
+            </div>
+        </section>
+        <section>
+            <div class="message-container">
+                <ul class="msg-list">
+                </ul>
+            </div>
+            <div class="page-nav">
+            </div>
+        </section>
+        <section>
+            <div class="form">
+                <label for="input-name">昵称</label>
+                <input autocomplete="on" placeholder="如：小明" id="input-name" class="input" type="text" name="name">
+                <label for="input-content">留言</label>
+                <textarea autocomplete="off" placeholder="请输入你的留言" class="input" id="input-content" cols="30" rows="10"
+                    name="content"></textarea>
+                <label for="input-captcha">验证码</label>
+                <div class="captcha-group">
+                    <img id="captcha" data-url="./php/function/captcha.php" onclick="refreshCaptcha()"
+                        src="./php/function/captcha.php" alt="验证码">
+                    <input autocomplete="off" id="input-captcha" class="input" type="text" name="captcha">
+                </div>
+                <input onclick="submitForm();" class="input" id="submit" type="button" value="提交">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <span class="footer"><a href="">Copyright (c) 2022 by Ayouth, All Rights Reserved.</a></span>
+    </footer>
+    <button class="leave-a-message" onclick="leaveAMsg()">🖊</button>
+    <button class="darkmode-toggle" onclick="modeToggle()">🌓</button>
+    <script src="./js/sweetalert2.min.js"></script>
+    <script src="./js/msgboard.js"></script>
+</body>
+
+</html>
