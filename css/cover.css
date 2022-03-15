@@ -1,0 +1,26 @@
+/* .cover{
+    display: block;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left:0;
+    height:100vh;
+    width:100%;
+    background-size: cover;
+    background-image:url("https://s1.ax1x.com/2022/03/15/bxOZM6.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.62;
+}
+body{
+    background: transparent;
+}
+
+.leave-a-message {
+    background: rgba(110, 110, 110, 0.6);
+    color: rgb(1, 69, 255);
+}
+.leave-a-message:hover {
+    background: rgba(110, 110, 110, 0.7);
+} */
