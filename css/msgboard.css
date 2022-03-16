@@ -1,12 +1,12 @@
 /*
  * @Author       :  Ayouth
  * @Date         :  2022-03-14 GMT+0800
- * @LastEditTime :  2022-03-15 GMT+0800
+ * @LastEditTime :  2022-03-16 GMT+0800
  * @FilePath     :  msgboard.css
  * @Description  :  留言板样式
  * Copyright (c) 2022 by Ayouth, All Rights Reserved. 
  */
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,9 +16,16 @@
     font-family: Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 }
 
+input,
+button,
+textarea {
+    -webkit-appearance: none;
+}
+
 :root {
     --custom-white: rgb(236, 236, 236);
 }
+
 body {
     font-size: 16px;
     min-height: 100vh;
@@ -413,6 +420,7 @@ select {
     border: 1px solid #ced4da;
     padding: 9px 12px;
     border-radius: 0.3rem;
+    border-radius: 0.3rem;
     font-size: 1.05rem;
     color: #212529;
     font-weight: normal;
@@ -451,11 +459,13 @@ select {
     font-size: 1.1rem;
     vertical-align: middle;
 }
+
 @media (min-width:560px) {
-    #submit{
+    #submit {
         margin: 35px auto;
     }
 }
+
 #submit:hover {
     background-color: #12804d;
 }
@@ -466,25 +476,29 @@ select {
 
 .captcha-group {
     margin: 10px 12px;
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     padding-bottom: 15px;
 }
-#input-captcha{
+
+#input-captcha {
     margin: auto;
     margin-left: 40px;
     max-width: 200px;
 }
-img#captcha{
+
+img#captcha {
     width: auto;
     max-height: 60px;
     cursor: pointer;
 }
-img#captcha:hover{
+
+img#captcha:hover {
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
     transition: 0.18s;
 }
+
 .leave-a-message {
     background: rgba(110, 110, 110, 0.2);
     border-radius: 5px;
@@ -507,7 +521,7 @@ img#captcha:hover{
 
 .darkmode-toggle {
     font-size: 17px;
-    background: rgb(29, 31, 43);
+    background-color: rgb(49, 49, 49);
     width: 3rem;
     height: 3rem;
     position: fixed;
