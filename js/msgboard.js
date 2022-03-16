@@ -131,7 +131,7 @@ async function submitForm() {
             confirmButtonText: '确认'
         }).then(initDataLoad);
     }
-    document.querySelector('#input-captcha').value='';
+    document.querySelector('#input-captcha').value = '';
 }
 /**
  * @description: 生成每一条消息的li element
@@ -224,11 +224,11 @@ async function initDataLoad() {
  */
 function displayProgressBar() {
     var setPercentage = function () {
-        var topMax = document.documentElement.scrollHeight - window.innerHeight;
-        var top = document.documentElement.scrollTop;
+        var scrollTopMax = document.documentElement.scrollHeight - window.innerHeight;
+        var scrollTop = document.documentElement.scrollTop;
         // 根据滚动位置做的事
         var bar = document.querySelector('.progress-bar');
-        bar && (bar.style.width = Math.round(top / topMax * 100) + '%');
+        bar && (bar.style.width = Math.round(scrollTop / scrollTopMax * 10) * 10 + '%');
     }
     var ticking = false;
     window.addEventListener('load', setPercentage);
