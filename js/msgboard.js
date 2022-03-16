@@ -96,14 +96,14 @@ async function submitForm() {
     }
     try {
         load.open();
-        var res = await fetch("./sample/message-submit.json", 
-        // {
-        //     method: "GET",
-        //     headers: {
-        //         "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-        //     },
-        //     body: body
-        // }
+        var res = await fetch("./sample/message-submit.json",
+            // {
+            //     method: "GET",
+            //     headers: {
+            //         "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+            //     },
+            //     body: body
+            // }
         );
         var json = await res.json();
     } catch (error) {
@@ -230,7 +230,7 @@ function displayProgressBar() {
         var top = document.documentElement.scrollTop;
         // 根据滚动位置做的事
         var bar = document.querySelector('.progress-bar');
-        bar && (bar.style.width = Math.round(top / topMax * 100) + '%');
+        bar && (bar.style.width = Math.round(top / topMax * 10) * 10 + '%');
     }
     var ticking = false;
     window.addEventListener('load', setPercentage);

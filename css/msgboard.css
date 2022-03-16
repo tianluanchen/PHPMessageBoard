@@ -43,6 +43,8 @@ a {
 }
 
 footer {
+    position: relative;
+    z-index: 0;
     text-align: center;
     margin: auto;
     padding: 25px 0;
