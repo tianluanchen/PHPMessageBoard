@@ -4,7 +4,7 @@
  * @Date         :  2022-03-14 GMT+0800
  * @LastEditTime :  2022-03-16 GMT+0800
  * @FilePath     :  db.php
- * @Description  :  数据库基本使用类
+ * @Description  :  数据库基本操作类
  * Copyright (c) 2022 by Ayouth, All Rights Reserved. 
  */
 //数据库

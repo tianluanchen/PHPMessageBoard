@@ -4,7 +4,7 @@
  * @Date         :  2022-03-14 GMT+0800
  * @LastEditTime :  2022-03-16 GMT+0800
  * @FilePath     :  ip.php
- * @Description  :  ip获取函数
+ * @Description  :  获取IP
  * Copyright (c) 2022 by Ayouth, All Rights Reserved. 
  */
 /** 

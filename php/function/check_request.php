@@ -4,7 +4,7 @@
  * @Date         :  2022-03-14 GMT+0800
  * @LastEditTime :  2022-03-16 GMT+0800
  * @FilePath     :  check_request.php
- * @Description  :  通用请求处理并过滤函数
+ * @Description  :  非法请求判断函数
  * Copyright (c) 2022 by Ayouth, All Rights Reserved. 
  */
 require_once('../config/api_config.php');

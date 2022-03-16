@@ -4,7 +4,7 @@
  * @Date         :  2022-03-14 GMT+0800
  * @LastEditTime :  2022-03-16 GMT+0800
  * @FilePath     :  message.php
- * @Description  :  消息单元类
+ * @Description  :  留言类
  * Copyright (c) 2022 by Ayouth, All Rights Reserved. 
  */
 //message 数据类

@@ -4,7 +4,7 @@
  * @Date         :  2022-03-14 GMT+0800
  * @LastEditTime :  2022-03-16 GMT+0800
  * @FilePath     :  filter.php
- * @Description  :  提交信息筛选函数
+ * @Description  :  留言过滤功能
  * Copyright (c) 2022 by Ayouth, All Rights Reserved. 
  */
 require_once('../config/api_config.php');

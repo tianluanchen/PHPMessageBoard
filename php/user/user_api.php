@@ -1,10 +1,10 @@
 <?php
 /*
  * @Author       :  Ayouth
- * @Date         :  2022-03-16 GMT+0800
+ * @Date         :  2022-03-14 GMT+0800
  * @LastEditTime :  2022-03-16 GMT+0800
  * @FilePath     :  user_api.php
- * @Description  :  普通留言板用户api
+ * @Description  :  留言板普通用户api
  * Copyright (c) 2022 by Ayouth, All Rights Reserved. 
  */
 require_once('../config/api_config.php');

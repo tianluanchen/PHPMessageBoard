@@ -4,7 +4,7 @@
  * @Date         :  2022-03-14 GMT+0800
  * @LastEditTime :  2022-03-16 GMT+0800
  * @FilePath     :  db_handle.php
- * @Description  :  数据库高级处理类
+ * @Description  :  数据库管理类
  * Copyright (c) 2022 by Ayouth, All Rights Reserved. 
  */
 require_once('db.php');

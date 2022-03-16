@@ -1,14 +1,109 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>管理员界面</title>
+    <link rel="stylesheet" href="../css/admin-panel.css">
     <link rel="stylesheet" href="../css/sweetalert2.min.css">
+    <link id="dark-css" rel="stylesheet" href="../css/admin-panel-dark.css" disabled>
+    <script>
+        /**
+         * @description: 首先判断渲染dark 
+         */
+        !function () {
+            if (localStorage.getItem('admin-panel-dark-mode') == 'true') {
+                var css = document.querySelector('link#dark-css');
+                css && (css.disabled = false);
+                document.addEventListener('DOMContentLoaded', function () {
+                    var btn = document.querySelector('.darkmode-toggle');
+                    btn.classList.toggle('darkmode-toggle-light', true);
+                });
+            }
+        }();
+    </script>
 </head>
+
 <body>
+    <div class="loader">
+        <div class="loading">
+            loading...
+        </div>
+    </div>
+    <div class="login-container hide">
+        <div class="login">
+            <div class="login-title">
+                <a href="">管理员登录</a>
+            </div>
+            <div class="login-form">
+                <div class="form-group">
+                    <label for="account">账号</label>
+                    <input name="account" type="text" id="account" class="form-control" placeholder="请输入账号">
+                </div>
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <input name="password" type="password" id="password" class="form-control" placeholder="请输入密码">
+                </div>
+                <div class="form-group">
+                    <label for="input-captcha">验证码</label>
+                    <div class="captcha-group">
+                        <img id="captcha" data-url="../php/function/captcha.php" onclick="refreshCaptcha()" alt="验证码">
+                        <input autocomplete="off" id="input-captcha" type="text" name="captcha">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="login-submit" onclick="submitLoginForm()">
+                        登录
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="hide">
+        <section>
+            <div class="title">
+                <a href="">
+                    留言板管理面板
+                </a>
+            </div>
+        </section>
+        <section class="messages">
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>date</th>
+                        <th>content</th>
+                        <th>ip</th>
+                        <th>useragent</th>
+                        <th>reply</th>
+                        <th>update</th>
+                        <th>select</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <div class="menu">
+                <button onclick="logout()" class="logout">登出</button>
+                <button onclick="deleteMsg()" class="delete">删除</button>
+                <button onclick="selectAll()" class="select-all">全选</button>
+                <button onclick="initDataLoad()" class="refresh">刷新</button>
+            </div>
+        </section>
+    </main>
+    <div class="progress-bar"></div>
     <script src="../js/sweetalert2.min.js"></script>
     <script src="../js/admin.js"></script>
+    <footer class="hide">
+        <span class="footer"><a href="">Copyright (c) 2022 by Ayouth, All Rights Reserved.</a></span>
+    </footer>
+    <button class="darkmode-toggle" onclick="modeToggle()">🌓</button>
 </body>
+
 </html>

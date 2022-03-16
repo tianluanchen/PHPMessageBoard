@@ -4,7 +4,7 @@
  * @Date         :  2022-03-14 GMT+0800
  * @LastEditTime :  2022-03-16 GMT+0800
  * @FilePath     :  admin_api.php
- * @Description  :  管理员API
+ * @Description  :  管理员api
  * Copyright (c) 2022 by Ayouth, All Rights Reserved. 
  */
 require_once('../config/api_config.php');
@@ -68,12 +68,16 @@ class AdminApi
                         break;
                     }
                 }
+                //如果传过来的数据合法
                 if ($error_param == 0) {
                     $res = array('code' => 200, 'msg' => '全部删除成功', 'total' => count($_POST['id']), 'success' => array(), 'failure' => array());
-                    if ($this->handle->delete($item)) {
-                        $res['success'][] = $item;
-                    } else
-                        $res['failure'][] = $item;
+                    //删除留言
+                    foreach ($_POST['id'] as $item){
+                        if ($this->handle->delete($item)) {
+                            $res['success'][] = $item;
+                        } else
+                            $res['failure'][] = $item;
+                    }
                     if (count($res['failure']) > 0)
                         $res['msg'] = '部分删除成功';
                     if (count($res['success']) == 0)
@@ -87,9 +91,6 @@ class AdminApi
             }
         }
         $this->send_response($res);
-        //判断post请求是否正确
-        if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['get'])) {
-        }
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['captcha']) && isset($_POST['name']) && isset($_POST['content'])) {
             //会话安全配置
             session_start(

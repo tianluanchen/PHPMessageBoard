@@ -1,8 +1,15 @@
+/*
+ * @Author       :  Ayouth
+ * @Date         :  2022-03-14 GMT+0800
+ * @LastEditTime :  2022-03-16 GMT+0800
+ * @FilePath     :  msgboard.css
+ * @Description  :  留言板css
+ * Copyright (c) 2022 by Ayouth, All Rights Reserved. 
+ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    letter-spacing: 0.6px;
     border: none;
     outline: none;
     font-family: Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
@@ -19,6 +26,7 @@ textarea {
 }
 
 body {
+    letter-spacing: 1px;
     font-size: 16px;
     min-height: 100vh;
     background-color: var(--custom-white);
@@ -36,7 +44,7 @@ a {
 
 footer {
     position: relative;
-    z-index: 1;
+    z-index: 0;
     text-align: center;
     margin: auto;
     padding: 25px 0;
@@ -169,8 +177,8 @@ section {
         animation-duration: 2.7s;
     }
 
-    * {
-        letter-spacing: 0.3px;
+    body {
+        letter-spacing: 0.5px;
     }
 }
 

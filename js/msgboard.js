@@ -113,6 +113,7 @@ async function submitForm() {
         });
         return;
     } finally {
+        captcha.value='';
         refreshCaptcha(false);
         load.close();
     }
@@ -131,7 +132,6 @@ async function submitForm() {
             confirmButtonText: '确认'
         }).then(initDataLoad);
     }
-    document.querySelector('#input-captcha').value = '';
 }
 /**
  * @description: 生成每一条消息的li element
@@ -280,6 +280,11 @@ function leaveAMsg() {
     })
 }
 
+/**
+ * @description: 色彩模式切换
+ * @param {void}
+ * @return {void}
+ */
 function modeToggle() {
     var btn = document.querySelector('.darkmode-toggle');
     var css = document.querySelector('link#dark-css');

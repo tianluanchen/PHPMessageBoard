@@ -11,11 +11,25 @@
 
 [在线演示](https://tianluanchen.github.io/PHPMessageBoard/)
 
-**目前留言板后端已完成，前端还剩管理原界面未完成**
+## 效果
+
+- [x] 简洁设计
+- [x] 顶部进度条
+- [x] loading加载动效
+- [x] 深色模式切换
+- [x] 留言板页数切换动效
+- [x] 诸多tips
+- [x] 响应式网页
+- [x] 验证码防护
 
 ## 安装
 
-PHP需在7.4版本及其以上，开启了PHP的GD库扩展和mysqli扩展，在/php/config/目录下分别按需配置两个文件，数据库可以通过msgboard.sql创建可用的表。
+PHP版本>=`7.4`，且需要开启PHP的GD库扩展和mysqli库扩展，使用MySql数据库，在/php/config/目录下分别配置两个文件，文件内附有注释。可以通过msgboard.sql创建默认的message表。
+
+## 其它
+
+感谢开源的[SweetAlert2](https://github.com/sweetalert2/sweetalert2)和
+[DarkReader](https://github.com/darkreader/darkreader)，这两个库真的非常棒！
 
 ## License
 

@@ -7,10 +7,10 @@
  * @Description  :  数据库配置
  * Copyright (c) 2022 by Ayouth, All Rights Reserved. 
  */
-//数据库配置
+//MySql 数据库配置 
 define('DB_CONFIG', [
     "username" => "msgboard",
-    "password" => "123456",
+    "password" => "msgboard",
     "database" => "msgboard",
     "hostname" => "localhost",
     "port" => 3306,
