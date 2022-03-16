@@ -3,7 +3,7 @@
  * @Date         :  2022-03-14 GMT+0800
  * @LastEditTime :  2022-03-16 GMT+0800
  * @FilePath     :  msgboard.js
- * @Description  :  留言板js 模板演示
+ * @Description  :  留言板js
  * Copyright (c) 2022 by Ayouth, All Rights Reserved. 
  */
 //load 加载对象
@@ -96,15 +96,9 @@ async function submitForm() {
     }
     try {
         load.open();
-        var res = await fetch("./sample/message-submit.json",
-            // {
-            //     method: "GET",
-            //     headers: {
-            //         "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-            //     },
-            //     body: body
-            // }
-        );
+        var res = await fetch("./sample/message-submit.json?t="+new Date().getTime(), {
+            method: "GET",
+        });
         var json = await res.json();
     } catch (error) {
         Swal.fire({
@@ -115,6 +109,7 @@ async function submitForm() {
         });
         return;
     } finally {
+        captcha.value='';
         refreshCaptcha(false);
         load.close();
     }
@@ -133,7 +128,6 @@ async function submitForm() {
             confirmButtonText: '确认'
         }).then(initDataLoad);
     }
-    document.querySelector('#input-captcha').value = '';
 }
 /**
  * @description: 生成每一条消息的li element
@@ -165,7 +159,7 @@ function generateMsgEle(msg) {
  */
 async function initDataLoad() {
     load.open();
-    var url = './sample/latest-messages.json?get=latest';
+    var url = './sample/latest-messages.json?t='+new Date().getTime();
     try {
         var res = await fetch(url);
         var json = await res.json();
@@ -226,11 +220,11 @@ async function initDataLoad() {
  */
 function displayProgressBar() {
     var setPercentage = function () {
-        var topMax = document.documentElement.scrollHeight - window.innerHeight;
-        var top = document.documentElement.scrollTop;
+        var scrollTopMax = document.documentElement.scrollHeight - window.innerHeight;
+        var scrollTop = document.documentElement.scrollTop;
         // 根据滚动位置做的事
         var bar = document.querySelector('.progress-bar');
-        bar && (bar.style.width = Math.round(top / topMax * 10) * 10 + '%');
+        bar && (bar.style.width = Math.round(scrollTop / scrollTopMax * 10) * 10 + '%');
     }
     var ticking = false;
     window.addEventListener('load', setPercentage);
@@ -282,6 +276,11 @@ function leaveAMsg() {
     })
 }
 
+/**
+ * @description: 色彩模式切换
+ * @param {void}
+ * @return {void}
+ */
 function modeToggle() {
     var btn = document.querySelector('.darkmode-toggle');
     var css = document.querySelector('link#dark-css');
@@ -413,7 +412,7 @@ function pageJump(instruct) {
  */
 async function loadAllData() {
     load.open();
-    var url = './sample/total-messages.json?get=total';
+    var url = './sample/total-messages.json?t='+new Date().getTime();;
     try {
         var res = await fetch(url);
         var json = await res.json();
@@ -472,15 +471,23 @@ async function loadAllData() {
     }
     load.close();
 }
+
+
+displayProgressBar();
 Swal.fire({
     icon: 'info',
     title: 'PHPMessageBoard项目演示',
-    text: '留言板内容为虚构，仅演示用，欢迎Star',
-    timer: 9000,
+    text: '留言板内容为虚构，仅演示用，欢迎Star，点击下方admin按钮前往管理界面演示页',
+    timer: 10000,
     footer: '<a style="color:#3367ff;text-decoration:underline" href="https://github.com/tianluanchen/PHPMessageBoard">GitHub仓库地址</a>',
     timerProgressBar: true,
-}).then(function () {
+    showConfirmButton:true,
+    confirmButtonText:'admin',
+    showCancelButton:true,
+}).then(function(result){
+    if(result.isConfirmed){
+        location.href='./admin';
+    }
     //执行
-    displayProgressBar();
     initDataLoad();
 })

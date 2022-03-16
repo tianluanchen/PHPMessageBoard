@@ -1,0 +1,444 @@
+/*! Dark reader generated CSS | Licensed under MIT https://github.com/darkreader/darkreader/blob/master/LICENSE */
+
+/* User-Agent Style */
+html {
+    background-color: #222323 !important;
+}
+html {
+    color-scheme: dark !important;
+}
+html, body {
+    background-color: #222323;
+}
+html, body {
+    border-color: #6f675b;
+    color: #d4cfc8;
+}
+a {
+    color: #4286d5;
+}
+table {
+    border-color: #565a5a;
+}
+::placeholder {
+    color: #a59e92;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #434511 !important;
+    color: #d4cfc8 !important;
+}
+::-webkit-scrollbar {
+    background-color: #292b2a;
+    color: #9f988b;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #494b4c;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #585c5d;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #4b4f4f;
+}
+::-webkit-scrollbar-corner {
+    background-color: #222323;
+}
+* {
+    scrollbar-color: #494b4c #292b2a;
+}
+::selection {
+    background-color: #154d91 !important;
+    color: #d4cfc8 !important;
+}
+::-moz-selection {
+    background-color: #154d91 !important;
+    color: #d4cfc8 !important;
+}
+
+/* Variables Style */
+:root {
+   --darkreader-neutral-background: #1e1f1f;
+   --darkreader-neutral-text: #c6c0b7;
+   --darkreader-selection-background: #154d91;
+   --darkreader-selection-text: #d4cfc8;
+}
+
+/* Modified CSS */
+* {
+    border-color: currentcolor;
+    outline-color: currentcolor;
+}
+:root {
+    --darkreader-bg--custom-white: #2b2d2d;
+    --darkreader-text--custom-white: #c9c4bc;
+}
+body {
+    background-color: var(--darkreader-bg--custom-white);
+}
+ul,
+ol {
+    list-style-image: none;
+}
+a {
+    color: inherit;
+    text-decoration-color: currentcolor;
+}
+footer {
+    color: rgb(167, 160, 148);
+}
+.progress-bar {
+    background-image: linear-gradient(to right,
+    rgb(44, 147, 92) 0%,
+    rgb(41, 154, 135) 100%);
+}
+.active.loader {
+    background-color: rgba(13, 13, 13, 0.3);
+}
+.active > .loading {
+    --border-radius: 1rem;
+    color: rgb(212, 207, 200);
+    background-color: transparent;
+    background-image: none;
+}
+.active > .loading::before {
+    background-image: linear-gradient(to left,
+    rgb(27, 85, 135) 0%,
+    rgb(32, 162, 166) 100%);
+}
+.active > .loading::after {
+    background-color: rgba(52, 60, 73, 0.75);
+}
+@media (max-width: 520px) {
+    .progress-bar {
+        background-image: linear-gradient(to right,
+        rgb(119, 22, 49) 0%,
+        rgb(116, 101, 21) 100%);
+    }
+}
+.login-container {
+    background-color: rgb(49, 51, 51);
+}
+.login {
+    --darkreader-bg--custom-white: #292b2a;
+    --darkreader-text--custom-white: #ccc7bf;
+    color: var(--darkreader-text--custom-white);
+    background-color: rgba(32, 32, 44, 0.5);
+}
+.login-title > a {
+    color: inherit;
+    text-decoration-color: currentcolor;
+}
+.login input {
+    border-color: rgb(65, 68, 68);
+    color: rgb(192, 186, 177);
+}
+img#captcha:hover {
+    box-shadow: rgba(34, 35, 35, 0.3) 0px 0px 4px 0px;
+}
+#login-submit {
+    background-color: rgb(47, 130, 76);
+    color: inherit;
+}
+#login-submit:hover {
+    background-color: rgb(42, 121, 69);
+}
+.title {
+    --darkreader-text--title-color: #b7b1a6;
+    color: var(--darkreader-text--title-color);
+}
+section.messages {
+    box-shadow: rgba(85, 89, 89, 0.5) 0px 0px 7px 0px;
+}
+table {
+    color: rgb(182, 176, 166);
+}
+th,
+td {
+    border-color: inherit;
+}
+table button {
+    background-color: rgb(32, 55, 132);
+    color: var(--darkreader-text--custom-white);
+}
+table button:hover {
+    background-color: rgb(47, 69, 143);
+}
+td.empty:nth-child(5) {
+    background-color: rgba(148, 64, 29, 0.27);
+}
+td.empty:nth-child(6) {
+    background-color: rgba(148, 64, 29, 0.35);
+}
+td.empty:nth-child(7) {
+    background-color: rgba(148, 64, 29, 0.43);
+}
+tbody tr:nth-child(2n-1) {
+    background-color: rgba(13, 13, 13, 0.04);
+}
+tbody tr:hover {
+    background-color: rgba(13, 13, 13, 0.08);
+}
+.menu > button {
+    color: var(--darkreader-text--custom-white);
+}
+.menu > button:hover {
+    box-shadow: rgba(13, 13, 13, 0.4) 0px 0px 4px 0px;
+}
+.delete {
+    background-color: rgb(144, 42, 49);
+}
+.logout {
+    background-color: rgb(89, 93, 94);
+}
+.select-all {
+    background-color: rgb(23, 80, 164);
+}
+.refresh {
+    background-color: rgb(37, 101, 69);
+}
+.swal2-popup.swal2-toast {
+    background-color: rgb(34, 35, 35);
+    background-image: none;
+    box-shadow: rgba(13, 13, 13, 0.07) 0px 0px 1px,
+    rgba(13, 13, 13, 0.07) 0px 1px 2px,
+    rgba(13, 13, 13, 0.07) 1px 2px 4px,
+    rgba(13, 13, 13, 0.07) 1px 3px 8px,
+    rgba(13, 13, 13, 0.07) 2px 4px 16px;
+}
+.swal2-popup.swal2-toast .swal2-success {
+    border-color: rgb(70, 108, 44);
+}
+.swal2-container.swal2-backdrop-show,
+.swal2-container.swal2-noanimation {
+    background-color: rgba(13, 13, 13, 0.4);
+    background-image: none;
+}
+.swal2-container.swal2-backdrop-hide {
+    background-color: rgba(13, 13, 13, 0) !important;
+    background-image: none !important;
+}
+.swal2-popup {
+    border-color: currentcolor;
+    background-color: rgb(34, 35, 35);
+    background-image: none;
+    color: rgb(166, 158, 147);
+}
+.swal2-popup:focus {
+    outline-color: currentcolor;
+}
+.swal2-title {
+    color: inherit;
+}
+.swal2-actions:not(.swal2-loading) .swal2-styled:hover {
+    background-image: linear-gradient(rgba(13, 13, 13, 0.1),
+    rgba(13, 13, 13, 0.1));
+}
+.swal2-actions:not(.swal2-loading) .swal2-styled:active {
+    background-image: linear-gradient(rgba(13, 13, 13, 0.2),
+    rgba(13, 13, 13, 0.2));
+}
+.swal2-loader {
+    border-color: rgb(46, 91, 134) transparent;
+}
+.swal2-styled {
+    box-shadow: rgba(13, 13, 13, 0) 0px 0px 0px 3px;
+}
+.swal2-styled.swal2-confirm {
+    border-color: currentcolor;
+    background-image: initial;
+    background-color: rgb(45, 38, 116);
+    color: rgb(212, 207, 200);
+}
+.swal2-styled.swal2-confirm:focus {
+    box-shadow: rgba(45, 38, 116, 0.5) 0px 0px 0px 3px;
+}
+.swal2-styled.swal2-deny {
+    border-color: currentcolor;
+    background-image: initial;
+    background-color: rgb(142, 41, 46);
+    color: rgb(212, 207, 200);
+}
+.swal2-styled.swal2-deny:focus {
+    box-shadow: rgba(142, 41, 46, 0.5) 0px 0px 0px 3px;
+}
+.swal2-styled.swal2-cancel {
+    border-color: currentcolor;
+    background-image: initial;
+    background-color: rgb(91, 95, 95);
+    color: rgb(212, 207, 200);
+}
+.swal2-styled.swal2-cancel:focus {
+    box-shadow: rgba(91, 95, 95, 0.5) 0px 0px 0px 3px;
+}
+.swal2-styled.swal2-default-outline:focus {
+    box-shadow: rgba(57, 88, 117, 0.5) 0px 0px 0px 3px;
+}
+.swal2-styled:focus {
+    outline-color: currentcolor;
+}
+.swal2-styled::-moz-focus-inner {
+    border-color: currentcolor;
+}
+.swal2-footer {
+    border-top-color: rgb(59, 61, 61);
+    color: inherit;
+}
+.swal2-timer-progress-bar {
+    background-color: rgba(13, 13, 13, 0.2);
+    background-image: none;
+}
+.swal2-close {
+    border-color: currentcolor;
+    background-color: rgba(13, 13, 13, 0);
+    background-image: none;
+    color: rgb(184, 178, 168);
+}
+.swal2-close:hover {
+    background-color: rgba(13, 13, 13, 0);
+    background-image: none;
+    color: rgb(210, 111, 107);
+}
+.swal2-close:focus {
+    outline-color: currentcolor;
+    box-shadow: rgba(57, 88, 117, 0.5) 0px 0px 0px 3px inset;
+}
+.swal2-close::-moz-focus-inner {
+    border-color: currentcolor;
+}
+.swal2-html-container {
+    color: inherit;
+}
+.swal2-file,
+.swal2-input,
+.swal2-textarea {
+    border-color: rgb(64, 67, 67);
+    background-color: inherit;
+    background-image: inherit;
+    box-shadow: rgba(13, 13, 13, 0.06) 0px 1px 1px inset,
+    rgba(13, 13, 13, 0) 0px 0px 0px 3px;
+    color: inherit;
+}
+.swal2-file.swal2-inputerror,
+.swal2-input.swal2-inputerror,
+.swal2-textarea.swal2-inputerror {
+    border-color: rgb(119, 28, 26) !important;
+    box-shadow: rgb(115, 27, 25) 0px 0px 2px !important;
+}
+.swal2-file:focus,
+.swal2-input:focus,
+.swal2-textarea:focus {
+    border-color: rgb(39, 79, 96);
+    outline-color: currentcolor;
+    box-shadow: rgba(13, 13, 13, 0.06) 0px 1px 1px inset,
+    rgba(57, 88, 117, 0.5) 0px 0px 0px 3px;
+}
+.swal2-file::placeholder,
+.swal2-input::placeholder,
+.swal2-textarea::placeholder {
+    color: rgb(184, 178, 168);
+}
+.swal2-file::placeholder,
+.swal2-input::placeholder,
+.swal2-textarea::placeholder {
+    color: rgb(184, 178, 168);
+}
+.swal2-range {
+    background-color: rgb(34, 35, 35);
+    background-image: none;
+}
+.swal2-range output {
+    color: inherit;
+}
+.swal2-file {
+    background-color: inherit;
+    background-image: inherit;
+}
+.swal2-select {
+    background-color: inherit;
+    background-image: inherit;
+    color: inherit;
+}
+.swal2-checkbox,
+.swal2-radio {
+    background-color: rgb(34, 35, 35);
+    background-image: none;
+    color: inherit;
+}
+.swal2-validation-message {
+    background-color: rgb(41, 43, 43);
+    background-image: none;
+    color: rgb(156, 148, 136);
+}
+.swal2-validation-message::before {
+    background-color: rgb(115, 27, 25);
+    color: rgb(212, 207, 200);
+}
+.swal2-icon {
+    border-color: rgb(132, 123, 109);
+}
+.swal2-icon.swal2-error {
+    border-color: rgb(119, 28, 26);
+    color: rgb(210, 111, 107); 
+}
+.swal2-icon.swal2-error [class^="swal2-x-mark-line"] {
+    background-color: rgb(115, 27, 25);
+}
+.swal2-icon.swal2-warning {
+    border-color: rgb(113, 66, 23);
+    color: rgb(219, 166, 118);
+}
+.swal2-icon.swal2-info {
+    border-color: rgb(30, 91, 110);
+    color: rgb(87, 177, 204);
+}
+.swal2-icon.swal2-question {
+    border-color: rgb(54, 72, 79);
+    color: rgb(135, 160, 168);
+}
+.swal2-icon.swal2-success {
+    border-color: rgb(70, 108, 44);
+    color: rgb(156, 195, 125);
+}
+.swal2-icon.swal2-success .swal2-success-ring {
+    border-color: rgba(70, 108, 44, 0.3); 
+}
+.swal2-icon.swal2-success [class^="swal2-success-line"] {
+    background-color: rgb(78, 105, 43);
+}
+.swal2-progress-steps {
+    background-color: inherit;
+    background-image: inherit;
+}
+.swal2-progress-steps .swal2-progress-step {
+    background-color: rgb(46, 93, 136);
+    background-image: none;
+    color: rgb(212, 207, 200);
+}
+.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step {
+    background-color: rgb(46, 93, 136);
+    background-image: none;
+}
+.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step {
+    background-color: rgb(40, 74, 83);
+    background-image: none;
+    color: rgb(212, 207, 200);
+}
+.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step-line {
+    background-color: rgb(40, 74, 83);
+    background-image: none;
+}
+.swal2-progress-steps .swal2-progress-step-line {
+    background-color: rgb(46, 93, 136);
+    background-image: none;
+}
+body.swal2-no-backdrop .swal2-container {
+    background-color: transparent !important;
+}
+body.swal2-no-backdrop .swal2-container .swal2-modal {
+    box-shadow: rgba(13, 13, 13, 0.4) 0px 0px 10px;
+}
+body.swal2-toast-shown .swal2-container {
+    background-color: transparent;
+}

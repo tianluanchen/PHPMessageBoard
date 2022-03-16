@@ -1,4 +1,12 @@
-/* .cover{
+/*
+ * @Author       :  Ayouth
+ * @Date         :  2022-03-14 GMT+0800
+ * @LastEditTime :  2022-03-16 GMT+0800
+ * @FilePath     :  cover.css
+ * @Description  :  背景css
+ * Copyright (c) 2022 by Ayouth, All Rights Reserved. 
+ */
+.cover{
     display: block;
     position: fixed;
     z-index: 0;
@@ -7,7 +15,11 @@
     height:100vh;
     width:100%;
     background-size: cover;
-    background-image:url("https://s1.ax1x.com/2022/03/15/bxOZM6.jpg");
+    /*
+        通过设置background-image设置背景图片，同时设置opcity进行适配
+        如不需要背景图片则在index.html中取消该css的引入
+    */
+    background-image:url("https://s1.ax1x.com/2022/03/16/qpRJv4.jpg");
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.62;
@@ -22,4 +34,4 @@ body{
 }
 .leave-a-message:hover {
     background: rgba(110, 110, 110, 0.7);
-} */
+}
