@@ -22,6 +22,18 @@
 - [x] 响应式网页
 - [x] 验证码防护
 
+更多可以看[在线演示](https://tianluanchen.github.io/PHPMessageBoard/)
+
+部分演示页截图
+
+亮色
+
+![亮色截图](https://s3.bmp.ovh/imgs/2022/03/725ac7858fa47226.png)
+
+深色
+
+![深色截图](https://s3.bmp.ovh/imgs/2022/03/6e4850c0d2be861c.png)
+
 ## 安装
 
 PHP版本>=`7.4`，且需要开启PHP的GD库扩展和mysqli库扩展，使用MySql数据库，在/php/config/目录下分别配置两个文件，文件内附有注释。可以通过msgboard.sql创建默认的message表。
