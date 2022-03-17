@@ -2,7 +2,7 @@
 /*
  * @Author       :  Ayouth
  * @Date         :  2022-03-14 GMT+0800
- * @LastEditTime :  2022-03-16 GMT+0800
+ * @LastEditTime :  2022-03-17 GMT+0800
  * @FilePath     :  api_config.php
  * @Description  :  api配置
  * Copyright (c) 2022 by Ayouth, All Rights Reserved. 
@@ -35,8 +35,8 @@ define('PROHIBITED_NAMES', [
 define('LATEST_NUMBER', 10);
 
 //验证码格式和大小
-define('CAPTCHA_FORMAT', 'mix');
-define('CAPTCHA_LENGTH', 4);
+define('CAPTCHA_FORMAT', 'mix');//验证码格式 mix表示数字混合字母 string表示字母 number表示数字
+define('CAPTCHA_LENGTH', 4);//验证码字符数 推荐4
 define('CAPTCHA_FONT_FAMILY', null); // $captcha_font_family='../static/font.ttf';
-define('CAPTCHA_HEIGHT', 40);
-define('CAPTCHA_WIDTH', 100);
+define('CAPTCHA_HEIGHT', 40);//验证码图片高度
+define('CAPTCHA_WIDTH', 100);//验证码图片宽度
