@@ -38,7 +38,7 @@
 
 PHP版本>=`7.4`，且需要开启PHP的GD库扩展和mysqli库扩展，使用MySql数据库，在/php/config/目录下分别配置两个文件，文件内附有注释。可以通过msgboard.sql创建默认的message表。
 
-**留言板主信息设置**，在/index.html文件中第43行左右设置留言板标题，第73行左右设置footer版权声明，另外在/js/msgboard.js中第151行左右将`data-name="Ayouth"`中的Ayouth更改为你的板主名称。
+**留言板主信息设置**，在/index.html文件中第8行左右设置网页title，第43行左右设置留言板标题，第73行左右设置footer版权声明，另外在/js/msgboard.js中第151行左右将`data-name="Ayouth"`中的Ayouth更改为你的板主名称。
 
 ## 其它
 
