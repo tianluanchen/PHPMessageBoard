@@ -1,7 +1,7 @@
 /*
  * @Author       :  Ayouth
  * @Date         :  2022-03-15 GMT+0800
- * @LastEditTime :  2022-03-16 GMT+0800
+ * @LastEditTime :  2022-03-17 GMT+0800
  * @FilePath     :  admin.js
  * @Description  :  管理面板js
  * Copyright (c) 2022 by Ayouth, All Rights Reserved. 
@@ -94,6 +94,12 @@ function refreshCaptcha(tip = true) {
             Toast.fire({
                 icon: 'success',
                 title: '验证码已刷新'
+            })
+        };
+        target.onerror = function(){
+            Toast.fire({
+                icon: 'error',
+                title: '验证码刷新失败'
             })
         };
     }
@@ -227,6 +233,7 @@ async function initDataLoad() {
         renderData(json.messages);
     }
     load.close();
+    console.log('%cProject:PHPMessageBoard  Author:Ayouth  GitHub:https://github.com/tianluanchen/PHPMessageBoard','display:block;padding:5px;border-radius:3px;color:#f3f3f3;background-color:#4882ee;font-size:18px');
 }
 
 /**
