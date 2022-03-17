@@ -2,7 +2,7 @@
 /*
  * @Author       :  Ayouth
  * @Date         :  2022-03-14 GMT+0800
- * @LastEditTime :  2022-03-16 GMT+0800
+ * @LastEditTime :  2022-03-17 GMT+0800
  * @FilePath     :  db.php
  * @Description  :  数据库基本操作类
  * Copyright (c) 2022 by Ayouth, All Rights Reserved. 
@@ -21,6 +21,9 @@ class DB
         $this->conn = mysqli_connect($hostname, $username, $password, $database, $port);
         if (!$this->conn) {
             die("Connection failed: " . mysqli_connect_error());
+        }
+        if (!mysqli_set_charset($this->conn, "utf8mb4")) {
+            die("Error loading character set utf8mb4:" . mysqli_error($this->conn));
         }
     }
     //执行sql语句
