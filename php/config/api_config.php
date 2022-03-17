@@ -37,6 +37,6 @@ define('LATEST_NUMBER', 10);
 //验证码格式和大小
 define('CAPTCHA_FORMAT', 'mix');//验证码格式 mix表示数字混合字母 string表示字母 number表示数字
 define('CAPTCHA_LENGTH', 4);//验证码字符数 推荐4
-define('CAPTCHA_FONT_FAMILY', null); // $captcha_font_family='../static/font.ttf';
+define('CAPTCHA_FONT_FAMILY', null); //验证码字体 /php/static目录下有一个font.ttf 可以将null改为 ../static/font.ttf  来使用;
 define('CAPTCHA_HEIGHT', 40);//验证码图片高度
 define('CAPTCHA_WIDTH', 100);//验证码图片宽度
