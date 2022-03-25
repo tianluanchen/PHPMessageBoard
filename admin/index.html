@@ -38,26 +38,31 @@
                 <a href="">管理员登录</a>
             </div>
             <div class="login-form">
-                <div class="form-group">
-                    <label for="account">账号</label>
-                    <input name="account" type="text" id="account" class="form-control" placeholder="请输入账号">
-                </div>
-                <div class="form-group">
-                    <label for="password">密码</label>
-                    <input name="password" type="password" id="password" class="form-control" placeholder="请输入密码">
-                </div>
-                <div class="form-group">
-                    <label for="input-captcha">验证码</label>
-                    <div class="captcha-group">
-                        <img id="captcha" data-url="../php/function/captcha.php" onclick="refreshCaptcha()" alt="验证码">
-                        <input autocomplete="off" id="input-captcha" type="text" name="captcha">
+                <form action="javascript:submitLoginForm()">
+
+                    <div class="form-group">
+                        <label for="account">账号</label>
+                        <input name="account" type="text" id="account" class="form-control" placeholder="请输入账号">
                     </div>
-                </div>
-                <div class="form-group">
-                    <button type="submit" id="login-submit" onclick="submitLoginForm()">
-                        登录
-                    </button>
-                </div>
+                    <div class="form-group">
+                        <label for="password">密码</label>
+                        <input name="password" type="password" id="password" class="form-control" placeholder="请输入密码">
+                    </div>
+                    <div class="form-group">
+                        <label for="input-captcha">验证码</label>
+                        <div class="captcha-group">
+                            <img id="captcha" data-url="../php/function/captcha.php" onclick="refreshCaptcha()"
+                                alt="验证码">
+                            <input autocomplete="off" id="input-captcha" type="text" name="captcha">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" id="login-submit">
+                            登录
+                        </button>
+                    </div>
+                </form>
+
             </div>
         </div>
     </div>
