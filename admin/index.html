@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="../css/sweetalert2.min.css">
     <link id="dark-css" rel="stylesheet" href="../css/admin-panel-dark.css" disabled>
     <script>
+        // 禁止iframe嵌套 
+        if (window.top != window.self) {
+            document.documentElement.style.display = 'none !important';
+            window.top.location = window.self.location;
+        }
         /**
          * @description: 首先判断渲染dark 
          */
