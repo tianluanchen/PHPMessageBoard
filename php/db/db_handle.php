@@ -2,7 +2,7 @@
 /*
  * @Author       :  Ayouth
  * @Date         :  2022-03-14 GMT+0800
- * @LastEditTime :  2022-03-16 GMT+0800
+ * @LastEditTime :  2022-04-22 GMT+0800
  * @FilePath     :  db_handle.php
  * @Description  :  数据库管理类
  * Copyright (c) 2022 by Ayouth, All Rights Reserved. 
@@ -39,6 +39,7 @@ class DBHandle
    {
       //防止sql注入
       $msg['name'] = mysqli_real_escape_string($this->db->conn, $msg['name']);
+      $msg['date'] = mysqli_real_escape_string($this->db->conn, $msg['date']);
       $msg['user_agent'] = mysqli_real_escape_string($this->db->conn, $msg['user_agent']);
       $msg['content'] = mysqli_real_escape_string($this->db->conn, $msg['content']);
       $msg['reply'] = mysqli_real_escape_string($this->db->conn, $msg['reply']);
@@ -54,7 +55,7 @@ class DBHandle
    //获取所有message
    public function query_all()
    {
-      $sql = 'select * from ' . $this->table_name.' order by `id` desc';
+      $sql = 'select * from `' . $this->table_name.'` order by `id` desc';
       if ($result = $this->db->excute_sql($sql)) {
          $msg_list = array();
          while ($row = mysqli_fetch_assoc($result)) {
@@ -85,6 +86,7 @@ class DBHandle
    {
       //防止sql注入
       $reply = mysqli_real_escape_string($this->db->conn, $reply);
+      $id = mysqli_real_escape_string($this->db->conn, $id);
       $sql = 'select * from `' . $this->table_name . '` where `id` = "' . $id . '"';
       if ($result = $this->db->excute_sql($sql)) {
          $num = mysqli_num_rows($result);
@@ -119,7 +121,7 @@ class DBHandle
    //删除表中所有数据
    public function delete_all()
    {
-      $sql = 'delete from ' . $this->table_name;
+      $sql = 'delete from `' . $this->table_name.'`';
       $result = $this->db->excute_sql($sql);
       return $result;
    }
