@@ -1,7 +1,7 @@
 /*
  * @Author       :  Ayouth
  * @Date         :  2022-03-14 GMT+0800
- * @LastEditTime :  2022-03-17 GMT+0800
+ * @LastEditTime :  2022-04-29 GMT+0800
  * @FilePath     :  msgboard.js
  * @Description  :  留言板js
  * Copyright (c) 2022 by Ayouth, All Rights Reserved. 
@@ -231,7 +231,7 @@ function displayProgressBar() {
         var scrollTop = document.documentElement.scrollTop;
         // 根据滚动位置做的事
         var bar = document.querySelector('.progress-bar');
-        bar && (bar.style.width = Math.round(scrollTop / scrollTopMax * 10) * 10 + '%');
+        bar && (bar.style.width = scrollTop / scrollTopMax * window.innerWidth + 'px');
     }
     var ticking = false;
     window.addEventListener('load', setPercentage);
