@@ -1,7 +1,7 @@
 /*
  * @Author       :  Ayouth
  * @Date         :  2022-03-14 GMT+0800
- * @LastEditTime :  2022-03-16 GMT+0800
+ * @LastEditTime :  2022-05-01 GMT+0800
  * @FilePath     :  msgboard.css
  * @Description  :  留言板css
  * Copyright (c) 2022 by Ayouth, All Rights Reserved. 
@@ -54,9 +54,9 @@ footer {
     display: block;
 }
 
-span.footer {
+.footer {
     font-size: 1rem;
-    margin: 15px auto;
+    margin: 20px auto;
     display: block;
 }
 
